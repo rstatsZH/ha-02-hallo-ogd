@@ -5,14 +5,77 @@ date: "Füge das Datum hier hinzu"
 output: html_document
 ---
 
-# Lade Packages und Daten
+```{r setup, include=FALSE}
+# Wir werden uns mit diesem Code-chunk in Woche 3 näher beschäftigen
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+# Lade Packages
 
 ```{r lade-packages, message=FALSE}
+
 library(ggplot2)
 library(dplyr)
 library(readr)
 
 ```
 
+# Lese Daten
+
+```{r lese-daten}
+
+# Wir lesen die Daten hier mittels der URL direkt aus dem opendata.swiss Datenportal.
+# Mehr dazu in Woche 3
+
+corona_kultur <- read_csv("https://www.web.statistik.zh.ch/ogd/data/ji/fk/kultur_ausfallentschaedigung.csv")
+
+```
+
 # Übungen
+
+## Übung 1
+
+- **Entferne diesen Text und beschreibe die vier RStudio Bereiche hier**
+
+## Übung 2
+
+- **Folge den Anweisungen aus der Hausaufgabe und füge deinen Code und die Antworten hier hinzu**
+
+```{r}
+
+```
+
+## Übung 3
+
+- Führe die folgenden **drei** Code-chunks aus bevor du beginnst die Aufgaben aus der Beschreibung der Hausaufgabe zu bearbeiten
+
+```{r plot-histogram}
+
+ggplot(data = corona_kultur, aes(x = Nachgefragt)) +
+  geom_histogram(binwidth = 100000)
+
+```
+
+```{r nachgefragt-gross}
+
+corona_kultur %>% 
+  filter(Nachgefragt > 2000000) %>% 
+  arrange(desc(Nachgefragt)) 
+
+```
+
+```{r beschluss-klein}
+
+corona_kultur_beschluss_gering <- corona_kultur %>% 
+  filter(Beschluss < 100000) 
+
+```
+
+## Übung 3 - Histogram
+
+- Füge hier nun einen neuen Code-chunk hinzu und estelle das Histogram aus, welches in der Hausaufgabe beschrieben ist
+
+## Übung 4 - Barplot (Bonus)
+
+- Füge hier nun einen neuen Code-chunk hinzu und estelle das Histogram aus, welches in der Hausaufgabe beschrieben ist
 
