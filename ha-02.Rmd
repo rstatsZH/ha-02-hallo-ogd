@@ -1,0 +1,18 @@
+---
+title: "Hausaufgabe 02 - Hallo OGD"
+author: "Füge deinen Namen hier hinzu"
+date: "Füge das Datum hier hinzu"
+output: html_document
+---
+
+# Lade Packages und Daten
+
+```{r lade-packages, message=FALSE}
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+```
+
+# Übungen
+
