@@ -47,7 +47,7 @@ corona_kultur <- read_csv("https://www.web.statistik.zh.ch/ogd/data/ji/fk/kultur
 
 ## Übung 3
 
-- Führe die folgenden **drei** Code-chunks aus bevor du beginnst die Aufgaben aus der Beschreibung der Hausaufgabe zu bearbeiten
+1. Führe die folgenden **drei** Code-chunks aus bevor du beginnst die Aufgaben aus der Beschreibung der Hausaufgabe zu bearbeiten
 
 ```{r plot-histogram}
 
